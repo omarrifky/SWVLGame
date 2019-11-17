@@ -27,7 +27,15 @@ public class Human1AnimationController : MonoBehaviour
     {
         busarrived = GameObject.Find("Bus").GetComponent<BusMovement>().busarrived;
 
+        if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time < 15)
+        {
+            late = false;
+        }
 
+        if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time >= 18)
+        {
+            late = true;
+        }
         if (station1.transform.position.z<=Bus.transform.position.z +2 && station1.transform.position.z + 5>= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false && late==false )
         {
             waving = true;
