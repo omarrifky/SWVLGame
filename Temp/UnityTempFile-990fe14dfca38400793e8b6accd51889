@@ -289,3 +289,4 @@
 "Assets/Scripts/Human1AnimationController.cs"
 "Assets/Scripts/Human2AnimationController.cs"
 "Assets/Scripts/Human3AnimationController.cs"
+"Assets/Scripts/MainMenu.cs"

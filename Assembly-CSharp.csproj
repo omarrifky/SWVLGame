@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\Human1AnimationController.cs" />
      <Compile Include="Assets\Scripts\Human2AnimationController.cs" />
      <Compile Include="Assets\Scripts\Human3AnimationController.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/MohamedAshraf/Documents/GitHub/SWVLGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

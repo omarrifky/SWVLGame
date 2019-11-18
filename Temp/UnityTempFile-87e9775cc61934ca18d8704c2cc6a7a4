@@ -284,8 +284,10 @@
 /define:ENABLE_LEGACY_INPUT_MANAGER
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+"Assets/PauseMenu.cs"
 "Assets/Scripts/BusCollision.cs"
 "Assets/Scripts/BusMovement.cs"
 "Assets/Scripts/Human1AnimationController.cs"
 "Assets/Scripts/Human2AnimationController.cs"
 "Assets/Scripts/Human3AnimationController.cs"
+"Assets/Scripts/MainMenu.cs"
