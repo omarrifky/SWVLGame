@@ -23,10 +23,13 @@ public class Human1Controller : MonoBehaviour
     public GameObject station2;
     public GameObject station3;
     public GameObject station4;
+    private BusCollision busCollisionScript ;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        busCollisionScript = GameObject.FindGameObjectWithTag("Cube").GetComponent<BusCollision>();
+       
     }
 
     // Update is called once per frame
@@ -60,6 +63,7 @@ public class Human1Controller : MonoBehaviour
             getonbus = true;
             anim.SetBool("GetOnBus", getonbus);
             cashsound.Play();
+            busCollisionScript.cashIn();
            
 
         }

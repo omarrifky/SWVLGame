@@ -23,7 +23,7 @@ public class BusMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log((int)Time.time);
+
         if(transform.position.z >= 666 && transform.position.x >= 3.6){
             busarrived = true;
         }

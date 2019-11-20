@@ -20,11 +20,13 @@ public class Human3Controller : MonoBehaviour
      float animover;
      bool onetime = false;
 
+     private BusCollision busCollisionScript ;
+
     bool once = false;
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
+        busCollisionScript = GameObject.FindGameObjectWithTag("Cube").GetComponent<BusCollision>();    }
 
     // Update is called once per frame
     void Update()
@@ -63,6 +65,7 @@ public class Human3Controller : MonoBehaviour
             anim.SetBool("GetOnBus", getonbus);
            
             cashsound.Play();
+             busCollisionScript.cashIn();
         }
 
         if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false && late == true)

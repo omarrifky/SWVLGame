@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BusCollision : MonoBehaviour
 {
     AudioSource crashsound;
-    public int moneycollected;
+    public int moneycollected = 0;
     public Text moneytext;
 
     // Start is called before the first frame update
@@ -43,9 +43,13 @@ public class BusCollision : MonoBehaviour
 
         }
     }
-    // Update is called once per frame
+
+    public void cashIn(){
+        moneycollected+=80;
+
+    }
     void Update()
     {
-        
+        moneytext.text = "MONEY COLLECTED: "+moneycollected;
     }
 }

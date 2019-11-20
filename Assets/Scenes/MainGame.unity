@@ -1169,9 +1169,6 @@ MonoBehaviour:
   latebuzzer: {fileID: 127055362}
   Bus: {fileID: 1548757453}
   station1: {fileID: 233477631}
-  station2: {fileID: 0}
-  station3: {fileID: 0}
-  station4: {fileID: 0}
 --- !u!1 &258316543
 GameObject:
   m_ObjectHideFlags: 0
@@ -7418,7 +7415,6 @@ MonoBehaviour:
   latebuzzer: {fileID: 127055362}
   Bus: {fileID: 1548757453}
   station1: {fileID: 1555262012}
-  station2: {fileID: 1555262012}
 --- !u!1001 &1745841258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7675,7 +7671,7 @@ GameObject:
   - component: {fileID: 1801820352}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - passenger
   - Bus
   - Obstacle
+  - Cube
   layers:
   - Default
   - TransparentFX
