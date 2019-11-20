@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using System;
 public class Human1Controller : MonoBehaviour
 {
     Animator anim;
@@ -14,21 +15,29 @@ public class Human1Controller : MonoBehaviour
     bool busarrived = false;
      float animover;
      bool onetime = false;
-     public GameObject woman;
-     public GameObject man;
 
     bool once = false;
     public GameObject Bus;
     public GameObject station1;
-    public GameObject station2;
-    public GameObject station3;
-    public GameObject station4;
     private BusCollision busCollisionScript ;
+    private bool onBoard;
+    ArrayList charactersPostions;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         busCollisionScript = GameObject.FindGameObjectWithTag("Cube").GetComponent<BusCollision>();
+        onBoard =  false;
+        charactersPostions = new ArrayList();
+        charactersPostions.Add(new Vector3(6.35f, 0.42f, 664.46f));//woman 1
+        charactersPostions.Add(new Vector3(5.71f, 0.42f, 664.89f));//woman 2
+        charactersPostions.Add(new Vector3(5.56f, 0.42f, 670.33f));//woman 3
+        charactersPostions.Add(new Vector3(5.81f, 0.42f, 671.85f));//man 1
+        charactersPostions.Add(new Vector3(5.91f, 0.42f, 665.92f));//man 2
+        charactersPostions.Add(new Vector3(6.66f, 0.42f, 669.41f));// man 3
+        charactersPostions.Add(new Vector3(6.35f, 0.42f, 663.68f));// child 1
+        charactersPostions.Add(new Vector3(5.71f, 0.42f, 662.42f));// child 2
+        charactersPostions.Add(new Vector3(5.56f, 0.42f, 674.33f));// child 3
        
     }
 
@@ -39,17 +48,18 @@ public class Human1Controller : MonoBehaviour
         if(busarrived==true && Time.time <= 89&& once == false){
             destinationlate = false;
             once = true;
-            print("ARRIVED");
         }
 
         if(busarrived==true && Time.time > 89 && once == false){
             destinationlate = true;
             once = true;
+                
         }
 
         if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time < 17)
         {
             late = false;
+                
         }
 
         if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time >= 17)
@@ -64,6 +74,7 @@ public class Human1Controller : MonoBehaviour
             anim.SetBool("GetOnBus", getonbus);
             cashsound.Play();
             busCollisionScript.cashIn();
+            onBoard = true;
            
 
         }
@@ -75,6 +86,7 @@ public class Human1Controller : MonoBehaviour
             getonbus = true;
             anim.SetBool("GetOnBus", getonbus);
             latebuzzer.Play();
+            onBoard = true;
         }
 
          if(getonbus==true){
@@ -93,20 +105,22 @@ public class Human1Controller : MonoBehaviour
             }
         }
 
-       // print(busarrived);
 
-        if(busarrived ==true && destinationlate == false)
-        {
-            
-            anim.SetBool("StartDancing", busarrived);
-             transform.position = new Vector3(6.35f, 0.42f, 664.46f);
+
+        if(busarrived)
+        {  
+            if(onBoard == true){
+                transform.position = (Vector3)charactersPostions[Int32.Parse(gameObject.tag)-1];
+            }
+            if(destinationlate){
+                anim.SetBool("StartYelling", destinationlate);
+            }
+            else{
+                anim.SetBool("StartDancing", busarrived);
+            }
+             
         }
 
-        if (busarrived == true && destinationlate == true)
-        {
-            anim.SetBool("StartYelling", destinationlate);
-          transform.position = new Vector3(6.35f, 0.42f, 664.46f);
-        }
 
 
     }

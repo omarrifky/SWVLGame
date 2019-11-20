@@ -44,17 +44,9 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\child1controller.cs" />
-     <Compile Include="Assets\child2controller.cs" />
-     <Compile Include="Assets\child3controller.cs" />
-     <Compile Include="Assets\Human1Controller.cs" />
-     <Compile Include="Assets\Human2Controller.cs" />
-     <Compile Include="Assets\Human3Controller.cs" />
-     <Compile Include="Assets\Man1Controller.cs" />
-     <Compile Include="Assets\Man2Controller.cs" />
-     <Compile Include="Assets\Man3Controller.cs" />
-     <Compile Include="Assets\Scripts\BusCollision.cs" />
+  <ItemGroup>     <Compile Include="Assets\Scripts\BusCollision.cs" />
      <Compile Include="Assets\Scripts\BusMovement.cs" />
+     <Compile Include="Assets\Scripts\Human1Controller.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
  <Reference Include="Unity.Timeline.Editor">
