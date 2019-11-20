@@ -107,4 +107,3 @@ public class Human1Controller : MonoBehaviour
 
     }
 }
-
