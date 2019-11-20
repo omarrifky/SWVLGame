@@ -1147,6 +1147,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3a4405a9ba9441c8cb9cdc2277aca6, type: 3}
+--- !u!1 &245528997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3c3a4405a9ba9441c8cb9cdc2277aca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 245528996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245528998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245528997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ec502a4014c4d48b3dbce8943c653e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashsound: {fileID: 427559890}
+  latebuzzer: {fileID: 127055362}
+  Bus: {fileID: 1548757453}
+  station1: {fileID: 233477631}
+  station2: {fileID: 0}
+  station3: {fileID: 0}
+  station4: {fileID: 0}
 --- !u!1 &258316543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,6 +5040,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0880d9ac631f24f409114af2781b3480, type: 3}
+--- !u!1 &1163471376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3c3a4405a9ba9441c8cb9cdc2277aca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 117395510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163471379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163471376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cbbc7fd9b0840d3b1760a80b04cff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashsound: {fileID: 427559890}
+  latebuzzer: {fileID: 127055362}
+  Bus: {fileID: 1548757453}
+  station1: {fileID: 150371509}
 --- !u!1 &1203972332 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 86f783457a9659e41a99dc3147fefdba,
@@ -7349,6 +7396,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c156f39e6d4ee694f90c9915e2daa633, type: 3}
+--- !u!1 &1743715279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3c3a4405a9ba9441c8cb9cdc2277aca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1124090395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743715280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743715279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fbbd88ea6924d87bf27056d3cef6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashsound: {fileID: 427559890}
+  latebuzzer: {fileID: 127055362}
+  Bus: {fileID: 1548757453}
+  station1: {fileID: 1555262012}
+  station2: {fileID: 1555262012}
 --- !u!1001 &1745841258
 PrefabInstance:
   m_ObjectHideFlags: 0
