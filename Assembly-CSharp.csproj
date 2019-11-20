@@ -44,13 +44,17 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\Scripts\BusCollision.cs" />
+  <ItemGroup>     <Compile Include="Assets\Human1Controller.cs" />
+     <Compile Include="Assets\Human2Controller.cs" />
+     <Compile Include="Assets\Human3Controller.cs" />
+     <Compile Include="Assets\Man1Controller.cs" />
+     <Compile Include="Assets\Man2Controller.cs" />
+     <Compile Include="Assets\Man3Controller.cs" />
+     <Compile Include="Assets\Scripts\BusCollision.cs" />
      <Compile Include="Assets\Scripts\BusMovement.cs" />
-     <Compile Include="Assets\Scripts\Human1AnimationController.cs" />
-     <Compile Include="Assets\Scripts\Human2AnimationController.cs" />
-     <Compile Include="Assets\Scripts\Human3AnimationController.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Woman1Animator.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/MohamedAshraf/Documents/GitHub/SWVLGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
