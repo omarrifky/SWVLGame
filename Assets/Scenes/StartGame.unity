@@ -2551,7 +2551,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Drive the bus to pickup people from stations , try reaching with maximum
-    profit by avoding Obstacles and not being late!
+    profit by avoding Obstacles and not being late! Reach Station 1 before 17sec ,
+    station 2 before 35 sec and station 3 before 50 sec and final station before 89sec!
 --- !u!222 &1884820070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2674,7 +2675,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 617073263}
+      - m_Target: {fileID: 1935805828}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

@@ -19,29 +19,18 @@ public class BusCollision : MonoBehaviour
     {
 
 
-        if (collision.gameObject.tag == "car")
-        {
-            crashsound = GetComponent<AudioSource>();
-            crashsound.Play();
-            moneycollected = moneycollected - 20;
-            moneytext.text = "MONEY COLLECTED:"+moneycollected;
-            GameObject.Destroy(collision.gameObject);
-
-
-
-        }
-
-        if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "car"||collision.gameObject.tag == "Obstacle")
         {
             crashsound = GetComponent<AudioSource>();
             crashsound.Play();
             moneycollected = moneycollected - 10;
-            moneytext.text = "MONEY COLLECTED:"+moneycollected;
             GameObject.Destroy(collision.gameObject);
 
 
 
         }
+
+       
     }
 
     public void cashIn(){
@@ -50,6 +39,6 @@ public class BusCollision : MonoBehaviour
     }
     void Update()
     {
-        moneytext.text = "MONEY COLLECTED: "+moneycollected;
+        moneytext.text = "MONEY COLLECTED: "+moneycollected+"\n"+"TIME: "+(int)Time.timeSinceLevelLoad;
     }
 }
