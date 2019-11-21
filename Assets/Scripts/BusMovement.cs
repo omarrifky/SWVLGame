@@ -12,6 +12,8 @@ public class BusMovement : MonoBehaviour
     void Start()
     {
          animationcomponent =GetComponent<Animation>();
+        
+        
     }
     public void Pause(){
 
@@ -23,7 +25,7 @@ public class BusMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        print((int)Time.timeSinceLevelLoad);
         if(transform.position.z >= 666 && transform.position.x >= 3.6){
             busarrived = true;
             // animation on

@@ -15,10 +15,11 @@ public class Human1Controller : MonoBehaviour
     bool busarrived = false;
      float animover;
      bool onetime = false;
+     private int requiredtime;
 
     bool once = false;
     public GameObject Bus;
-    public GameObject station1;
+    public GameObject station;
     private BusCollision busCollisionScript ;
     private bool onBoard;
     ArrayList charactersPostions;
@@ -45,28 +46,37 @@ public class Human1Controller : MonoBehaviour
     void Update()
     {
         busarrived = GameObject.Find("Bus").GetComponent<BusMovement>().busarrived;
-        if(busarrived==true && Time.time <= 89&& once == false){
+        if(busarrived==true && Time.timeSinceLevelLoad <= 89&& once == false){
             destinationlate = false;
             once = true;
         }
 
-        if(busarrived==true && Time.time > 89 && once == false){
+        if(busarrived==true && Time.timeSinceLevelLoad > 89 && once == false){
             destinationlate = true;
             once = true;
                 
         }
+        if(station.CompareTag("1")){
+         requiredtime = 18;
+        }
+        if(station.CompareTag("2")){
+           requiredtime = 35; 
+        }
+        if(station.CompareTag("3")){
+            requiredtime = 60;
+        }
 
-        if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time < 17)
+        if (station.transform.position.z <= Bus.transform.position.z + 2 && station.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time < requiredtime)
         {
             late = false;
                 
         }
 
-        if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time >= 17)
+        if (station.transform.position.z <= Bus.transform.position.z + 2 && station.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && Time.time >= requiredtime)
         {
             late = true;
         }
-        if (station1.transform.position.z<=Bus.transform.position.z +2 && station1.transform.position.z + 5>= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false && late==false )
+        if (station.transform.position.z<=Bus.transform.position.z +2 && station.transform.position.z + 5>= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false && late==false )
         {
             waving = true;
             anim.SetBool("StartWaving", waving);
@@ -80,7 +90,7 @@ public class Human1Controller : MonoBehaviour
         }
        
 
-        if (station1.transform.position.z <= Bus.transform.position.z + 2 && station1.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false&&late==true)
+        if (station.transform.position.z <= Bus.transform.position.z + 2 && station.transform.position.z + 5 >= Bus.transform.position.z && Bus.transform.position.x >= 3.6 && getonbus == false&&late==true)
         {
             anim.SetBool("Late", late);
             getonbus = true;
@@ -88,17 +98,27 @@ public class Human1Controller : MonoBehaviour
             latebuzzer.Play();
             onBoard = true;
         }
-
+         
          if(getonbus==true){
          if(onetime == false){
-             if(late==false)
-            animover = Time.time + 5.8f;
-            else
-             animover = Time.time + 9f;
+
+             if(late==false){
+        if(gameObject.CompareTag("4")||gameObject.CompareTag("5")||gameObject.CompareTag("6"))
+         animover = Time.timeSinceLevelLoad + 2f;
+        else if(gameObject.CompareTag("7")||gameObject.CompareTag("8")||gameObject.CompareTag("9"))
+         animover = Time.timeSinceLevelLoad  + 4.8f;
+        else
+        animover = Time.timeSinceLevelLoad  + 5.8f;
+
+             }
+            else{
+                
+             animover = Time.timeSinceLevelLoad  + 9f;
+            }
             onetime = true;
             
             }
-            if(Time.time > animover&& onetime == true){
+            if(Time.timeSinceLevelLoad  > animover&& onetime == true){
             
                transform.position = new Vector3(500f, 0.42f, 666);
                 onetime = false;
